@@ -7,7 +7,6 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  
   <!-- Background & Abstract Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/ZnBackgroundAndAbstract.pdf</loc>
@@ -15,7 +14,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 1 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/ProveThatInfinityIsNotInfinity.pdf</loc>
@@ -23,7 +21,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 2 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/DefinitionOfExistence.pdf</loc>
@@ -31,7 +28,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 3 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/ProofsForTheExistenceOfTheNaturalNumbers.pdf</loc>
@@ -39,7 +35,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 4 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/ProofsOnTheRealNumbers.pdf</loc>
@@ -47,7 +42,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 5 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/Prove_and_verify_that_infinity_is_not_x.pdf</loc>
@@ -55,7 +49,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 6 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/ASummaryOfUnbounded.pdf</loc>
@@ -63,7 +56,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 7 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/SupportingProofsForTheEmpty.pdf</loc>
@@ -71,7 +63,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 8 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/OffThePaperSolvingAnInfinityParadox.pdf</loc>
@@ -79,7 +70,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 9 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/ReflexivityOfInfinityAndNotNotNotEffects.pdf</loc>
@@ -87,7 +77,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 10 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/SizeOfInfinity.pdf</loc>
@@ -95,7 +84,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Chapter 11 Document -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/Note.pdf</loc>
@@ -103,7 +91,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <!-- Wrap-up Poem Document (詙) -->
   <url>
     <loc>https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/WrapUpPoemZn.pdf</loc>
