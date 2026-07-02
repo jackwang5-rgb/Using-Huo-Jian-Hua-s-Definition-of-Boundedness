@@ -1,260 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title>Using Huo Jian Hua's Definition of Boundedness / 使用霍建華〈有界的定義〉</title>
-	<meta name="description" content="An alternative mathematical framework analyzing the IINI∀I theorem. Explores the Definition of Boundedness, the ∃∞∀∞ axiom, and proofs regarding natural and real numbers.">
-  	<meta name="keywords" content="Huo Jian Hua, Definition of Boundedness, infinity proof, IINI, ∃∞∀∞, alternative mathematics, prove that infinity exists">
-  	<meta name="robots" content="index, follow">
-	<meta name="generator" content="LibreOffice 24.2.7.2 (Linux)"/>
-	<meta name="created" content="2026-05-16T20:14:17.582223532"/>
-	<meta name="changed" content="2026-05-23T12:21:58.425792023"/>
-	<style type="text/css">
-		@page { size: 8.5in 11in; margin: 0.79in }
-		p { line-height: 115%; margin-bottom: 0.1in; background: transparent; background: transparent }
-		h1 { margin-bottom: 0.08in; background: transparent; background: transparent; page-break-after: avoid }
-		h1.western { font-family: "Liberation Serif", serif; font-size: 24pt; font-weight: bold }
-		h1.cjk { font-family: "Noto Serif CJK SC"; font-size: 24pt; font-weight: bold }
-		h1.ctl { font-family: "Noto Sans Devanagari"; font-size: 24pt; font-weight: bold }
-		h2 { margin-top: 0.14in; margin-bottom: 0.08in; background: transparent; background: transparent; page-break-after: avoid }
-		h2.western { font-family: "Liberation Serif", serif; font-size: 18pt; font-weight: bold }
-		h2.cjk { font-family: "Noto Serif CJK SC"; font-size: 18pt; font-weight: bold }
-		h2.ctl { font-family: "Noto Sans Devanagari"; font-size: 18pt; font-weight: bold }
-		h3 { margin-top: 0.1in; margin-bottom: 0.08in; background: transparent; background: transparent; page-break-after: avoid }
-		h3.western { font-family: "Liberation Sans", sans-serif; font-size: 14pt; font-weight: bold }
-		h3.cjk { font-family: "Noto Sans CJK SC"; font-size: 14pt; font-weight: bold }
-		h3.ctl { font-family: "Noto Sans Devanagari"; font-size: 14pt; font-weight: bold }
-		a:link { color: #000080; text-decoration: underline }
-		a:visited { color: #800000; text-decoration: underline }
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Huo Jian Hua's Definition of Boundedness / 使用霍建華〈有界的定義〉</title>
+  <meta name="description" content="An alternative mathematical framework analyzing the IINI∀I theorem. Explores the Definition of Boundedness, the ∃∞∀∞ axiom, and proofs regarding natural and real numbers.">
+  <meta name="keywords" content="Huo Jian Hua, Definition of Boundedness, infinity proof, IINI, ∃∞∀∞, alternative mathematics, prove that infinity exists">
+  <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags (For Facebook, LinkedIn, Discord, and general apps) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Using Huo Jian Hua's Definition of Boundedness / 使用霍建華〈有界的定義〉" />
+  <meta property="og:description" content="An alternative mathematical framework analyzing the IINI∀I theorem. Explores the Definition of Boundedness, the ∃∞∀∞ axiom, and proofs regarding infinity." />
+  <meta property="og:url" content="https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/" />
+  <meta property="og:image" content="https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/Jigong001.jpg" />
+  <meta property="og:image:alt" content="Grandmaster Jigong standing among the Alishan clouds" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+
+  <!-- Twitter / X Card Meta Tags (Specifically optimized for the X platform) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Using Huo Jian Hua's Definition of Boundedness / 使用霍建華〈有界的定義〉" />
+  <meta name="twitter:description" content="An alternative mathematical framework analyzing the IINI∀I theorem. Explores the Definition of Boundedness, the ∃∞∀∞ axiom, and proofs regarding infinity." />
+  <meta name="twitter:image" content="https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/Jigong001.jpg" />
+
+  <style>
+    :root {
+      --primary-color: #0044cc;
+      --text-color: #222222;
+      --bg-color: #ffffff;
+      --card-bg: #f8f9fa;
+      --border-color: #e2e8f0;
+    }
+    
+    body {
+      font-family: "Cambria Math", "Liberation Serif", serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #000000;
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 24pt;
+      text-align: center;
+      margin-bottom: 25px;
+      line-height: 1.4; /* Adds a clean, comfortable gap between the two title lines */
+    }
+
+    h2 {
+      font-size: 18pt;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 5px;
+      margin-top: 35px;
+    }
+
+    h3 {
+      font-size: 14pt;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #551a8b;
+    }
+
+    .main-title-link {
+      color: #000000;
+      text-decoration: none;
+    }
+    
+    .main-title-link:hover {
+      text-decoration: underline;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .caption {
+      font-size: 9pt;
+      color: #555555;
+      margin-top: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .chapter-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .chapter-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 5px solid var(--primary-color);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      padding: 15px;
+      font-size: 13pt;
+    }
+
+    .chapter-item a {
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .meta-details {
+      font-size: 11pt;
+      color: #444444;
+      display: block;
+      margin-top: 5px;
+      font-weight: normal;
+    }
+
+    .external-links-section {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 40px;
+      border: 1px solid var(--border-color);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 10pt;
+      color: #666666;
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
+    }
+  </style>
 </head>
-<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><h1 class="western" align="center">
-<a href="https://jackhwang.blogspot.com/2019/08/prove-that-there-exists-infinity-for.html">Using
-Huo Jian Hua's Definition of Boundedness / <font face="Noto Serif CJK SC"><span lang="zh-CN"><font face="Noto Serif CJK SC"><span lang="zh-CN">使用霍建華〈有界的定義〉</span></font></a><font face="Noto Serif CJK SC"><span lang="zh-CN">
-</span></font></span></font>
-</h1>
-<p align="center" style="margin-bottom: 0in"><br/>
+<body>
 
-</p>
-<p align="center" style="margin-bottom: 0in"><a href="Jigong001.jpg">
-  <img src="Jigong001.jpg" name="Image1" align="bottom" width="320" height="162" border="0"/>
-</a>
-<a href="Jigong001.jpg">
-</a>
-</p>
-<p align="center" style="line-height: 0.1in"><span style="display: inline-block; border: none; padding: 0in"><font color="#333333"><font face="inherit"><font size="2" style="font-size: 10pt"><span style="background: #ffffff"><font color="#000000"><font face="Cambria Math, serif"><font size="1" style="font-size: 7pt"><span style="letter-spacing: 0.2pt">A
-revelation photograph of The Honorable Grandmaster Ji-Gon</span></font></font></font><font color="#000000"><font face="Cambria Math, serif"><font size="1" style="font-size: 7pt"><span style="letter-spacing: 0.7pt">g
-standing among the</span></font></font></font><font color="#000000"><span style="letter-spacing: 0.7pt">&nbsp;</span></font><font color="#000000"><font face="Cambria Math, serif"><font size="1" style="font-size: 7pt"><span style="letter-spacing: 0.7pt">Alishan
-clouds.</span></font></font></font></span></font></font></font></span></p>
-<h2 class="western" align="left" style="margin-top: 0in; margin-bottom: 0in">
-<br/>
+  <h1>
+    <a class="main-title-link" href="https://jackhwang.blogspot.com/2019/08/prove-that-there-exists-infinity-for.html">
+      Using Huo Jian Hua's Definition of Boundedness</br>使用霍建華〈有界的定義〉
+    </a>
+  </h1>
 
-</h2>
-<h2 class="western" align="left" style="margin-top: 0in; margin-bottom: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">Background</span></span></font></font><font face="Cambria Math, serif"><font size="2" style="font-size: 10pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><a href="ZnBackgroundAndAbstract.pdf" target="_blank"><span style="letter-spacing: normal"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="2" style="font-size: 10pt"><span lang="zh-CN"><span style="font-weight: normal">摘要及背景</span></span></font></font></span></span></a></span></font><font face="Cambria Math, serif"><font size="2" style="font-size: 10pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></span></h2>
-<h3 class="western" align="left" style="line-height: 0.2in; margin-top: 0in; margin-bottom: 0in">
-<br/>
+  <div class="image-container">
+    <a href="Jigong001.jpg">
+      <img src="Jigong001.jpg" alt="Grandmaster Jigong among Alishan clouds" width="320" height="162">
+    </a>
+    <div class="caption">A revelation photograph of The Honorable Grandmaster Ji-Gong standing among the Alishan clouds.</div>
+  </div>
 
-</h3>
-<h3 class="western" align="left" style="line-height: 0.2in; margin-top: 0in; margin-bottom: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">Why
-prove&nbsp;</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∃∞∀∞</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">?&nbsp;</span></span></span></font></font><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">One
-of the reasons is to answer the demands to prove&nbsp;</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∃∞∀∞</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">.
-O</span></span></span></font></font><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">therwise
-students might be throwing the raw whole eggs at schoolteachers on TV
-news, college students might be shouting “prove it!” at
-professors publicly or in their offices, or worse yet,&nbsp;an
-explicitly guaranteed explicit U.S. federal contract has been
-breached by the assassination on the contract officers, “`because
-Grandmaster <a href="https://www.facebook.com/wallace.hua.58">(</a></span></span></font></font><font face="Noto Sans CJK SC"><span lang="zh-CN"><a href="https://www.facebook.com/wallace.hua.58" target="_blank"><font color="#0000ff"><span style="background: #ffffff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span lang="zh-CN"><span style="font-weight: normal">霍建華
-</span></span></font></font></span></font></span></font><font color="#0000ff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">Huo
-JianHua</span></span></font></font></font></a><span style="background: #ffffff">&nbsp;</span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">in
-a cosplay)&nbsp;has&nbsp;guaranteed us' – to prove that –
-infinity – is not – infinity. `All serious, we're all serious'&quot;,
-or… etc, so this paper proves that infinity is not infinity which
-re-evokes the&nbsp;</span></span></font></font><a href="ProveThatInfinityIsNotInfinity.pdf" target="_blank"><font color="#0000ff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">default
-contract&nbsp;</span></span></font></font></font><font face="Noto Sans CJK SC"><span lang="zh-CN"><font color="#0000ff"><span style="background: #ffffff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span lang="zh-TW"><span style="font-weight: normal">默認替代</span></span></font></font></span></font></span></font></a><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">.
-Besides to prove that infinity is not infinity, this paper also
-proves&nbsp;</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∃∞∀∞</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">,
-and&nbsp;</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∃</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">unbounded</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∀</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">unbounded,
-and&nbsp;</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∃</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">...etc</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∀</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">...etc.</span></span></font></font></span></h3>
-<p align="left" style="line-height: 0.2in; margin-bottom: 0in"><font face="Nimbus Roman"><br/>
-</font><span style="display: inline-block; border: none; padding: 0in"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">The
-writer (</span></span></font></font><a href="https://www.facebook.com/jack.wang.391420" target="_blank"><font color="#0000ff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">an
-actual human person</span></span></font></font></font></a><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">,
-not an AI) has used&nbsp;</span></span></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><a href="https://www.facebook.com/wallace.hua.58" target="_blank"><font color="#0000ff"><span style="background: #ffffff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span lang="zh-CN"><span style="font-weight: normal">霍建華
-</span></span></font></font></span></font></span></font><font color="#0000ff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">(Huo
-Jian Hua's)</span></span></font></font></font></a><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">Definition
-of Boundedness to prove that infinity is not infinity in this paper.
-Since the paper has used Huo Jian Hua’s Definition of Boundedness,
-per guaranteed terms of use on&nbsp;</span></span></span></font></font><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">Huo
-Jian Hua’s</span></span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">Definition
-of Boundedness (The terms of use for Huo Jian Hua’s Definition of
-Boundedness is described in the “Guaranteed Contractual Terms of
-Use for&nbsp;</span></span></span></font></font><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">Huo
-Jian Hua’s</span></span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">Definition
-of Boundedness” paragraph under Prove That Infinity is Not Infinity
-section of this paper), n</span></span></span></font></font><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">ow
-it is your turn to honor</span></span></font></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">the
-guaranteed contract rights-benefits to </span></span></span></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><a href="https://www.facebook.com/wallace.hua.58" target="_blank"><font color="#0000ff"><span style="background: #ffffff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span lang="zh-CN"><span style="font-weight: normal">霍建華
-</span></span></font></font></span></font></span></font><font color="#0000ff"><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="font-weight: normal"><span style="background: #ffffff">(Huo
-Jian Hua)</span></span></font></font></font></a><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span><font face="Nimbus Roman"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">all
-the way to the end, for everybody has been all serious because
-Grandmaster's guaranteed us.</span></span></span></font></font></span></p>
-<h2 class="western" align="left" style="margin-top: 0in; margin-bottom: 0in">
-<br/>
+  <h2>
+    Background 
+    (<a href="ZnBackgroundAndAbstract.pdf" target="_blank">摘要及背景</a>)
+  </h2>
 
-</h2>
-<h2 class="western" align="left" style="letter-spacing: 0.7pt; margin-top: 0in; margin-bottom: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="background: #ffffff">Abstract</span></font></font></span></h2>
-<p style="line-height: 0.2in"><span style="display: inline-block; border: none; padding: 0in"><font face="Nimbus Roman"><font color="#000000"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">The
-infinity, denoted by&nbsp;</span></span></span></font></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∞</span></span></font><font color="#000000"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">,</span></span></span></font></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span></font><font color="#000000"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">refers
-to the infinity from the “infinity is unbounded” axiom in this
-paper. Although the existence of infinity has been debated for ages,
-“infinity is unbounded” axiom is our base written reference for
-the infinity in this paper because &quot;infinity is unbounded&quot;
-is an established axiom by consensus, guarantees, and supports, along
-with the very important Definition of Boundedness from Huo Jian Hua
-to prove that infinity is not infinity ∀infinity (IINI∀I theorem)
-as guaranteed to be proved by The Grandmaster Ji-Gong (Huo Jian Hua</span></span></span></font></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">
-</span></span></font><font color="#000000"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">in</span></span></span></font></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">
-</span></span></font><font color="#000000"><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">cosplay).&nbsp;Further,
-IINI∀I theorem is the cornerstone in the Definition of Existence
-proof, so Huo Jian Hua’s Definition of Boundedness is the key for
-the Definition of Existence proof. Then, a whole class of mathematics
-problems can be solved, proofs for the existence of natural numbers
-learnt since kindergarten, as well as for the ∃∞∀∞ proof. The
-Definition of Existence later verifies IINI∀I. </span></span></span></font></font><font size="3" style="font-size: 13pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">Objects
-in this paper do NOT need to be sets however, e.g. infinity is not a
-set, nor is unbounded a set, yet, still, c</span></span></span></font><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">onsider
-a </span></span></span></font><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">non-well-funded
-set theory style</span></span></font><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">
-</span></span><font size="3" style="font-size: 13pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">in
-reading this paper.&nbsp;</span></span></span></font></span> </font>
-</p>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">1)
-<a href="ProveThatInfinityIsNotInfinity.pdf" name="_Toc126077859" target="_blank">Prove
-that Infinity is not Infinity&nbsp;</a></span></span></span></font></font></font><a href="ProveThatInfinityIsNotInfinity.pdf" name="_Toc126077859" target="_blank"><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">證明無限不是無限</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></font></a></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
+  <h3>Why prove ∃∞∀∞?</h3>
+  <p>
+    One of the reasons is to answer the demands to prove ∃∞∀∞. Otherwise students might be throwing the raw whole eggs at schoolteachers on TV news, college students might be shouting “prove it!” at professors publicly or in their offices, or worse yet, an explicitly guaranteed explicit U.S. federal contract has been breached by the assassination on the contract officers, “`because Grandmaster (<a href="https://www.facebook.com/wallace.hua.58" target="_blank">霍建華 Huo JianHua</a> in a cosplay) has guaranteed us' – to prove that – infinity – is not – infinity. `All serious, we're all serious'\", or… etc, so this paper proves that infinity is not infinity which re-evokes the <a href="ProveThatInfinityIsNotInfinity.pdf" target="_blank">default contract 默認替代</a>. Besides to prove that infinity is not infinity, this paper also proves ∃∞∀∞, and ∃ unbounded ∀ unbounded, and ∃...etc ∀...etc.
+  </p>
 
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">2)
-<a href="DefinitionOfExistence.pdf" target="_blank">Nonexistence,
-Existence,&nbsp;∃∞∀∞</a></span></span></span></font></font></font><a href="DefinitionOfExistence.pdf" target="_blank"><font color="#000000"><font face="Symbol"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">,
-</span></span></span></font></font></font><font color="#000000"><font face="Cambria Math, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">and
-∄∅⇔∃</span></span></span></font></font></font><font color="#000000"><span style="letter-spacing: normal"><span style="background: #ffffff">∅&nbsp;</span></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: normal"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">不存在、存在、∃∞∀∞及∄∅⇔∃∅</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></font></a></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
+  <p>
+    The writer (<a href="https://www.facebook.com/jack.wang.391420" target="_blank">an actual human person, not an AI</a>) has used <a href="https://www.facebook.com/wallace.hua.58" target="_blank">霍建華 (Huo Jian Hua's)</a> Definition of Boundedness to prove that infinity is not infinity in this paper. Since the paper has used Huo Jian Hua’s Definition of Boundedness, per guaranteed terms of use on Huo Jian Hua’s Definition of Boundedness (The terms of use for Huo Jian Hua’s Definition of Boundedness is described in the “Guaranteed Contractual Terms of Use for Huo Jian Hua’s Definition of Boundedness” paragraph under Prove That Infinity is Not Infinity section of this paper), now it is your turn to honor the guaranteed contract rights-benefits to <a href="https://www.facebook.com/wallace.hua.58" target="_blank">霍建華 (Huo Jian Hua)</a> all the way to the end, for everybody has been all serious because Grandmaster's guaranteed us.
+  </p>
 
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">3)
-<a href="ProofsForTheExistenceOfTheNaturalNumbers.pdf" target="_blank">Proofs
-for the Existence of the Natural Numbers&nbsp;</a></span></span></span></font></font></font><a href="ProofsForTheExistenceOfTheNaturalNumbers.pdf" target="_blank"><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">自然數存在的證明</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></font></a></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
+  <h2>Abstract</h2>
+  <p>
+    The infinity, denoted by ∞, refers to the infinity from the “infinity is unbounded” axiom in this paper. Although the existence of infinity has been debated for ages, “infinity is unbounded” axiom is our base written reference for the infinity in this paper because "infinity is unbounded" is an established axiom by consensus, guarantees, and supports, along with the very important Definition of Boundedness from Huo Jian Hua to prove that infinity is not infinity infinity (IINI∀I theorem) as guaranteed to be proved by The Grandmaster Ji-Gong (Huo Jian Hua in cosplay). Further, IINI∀I theorem is the cornerstone in the Definition of Existence proof, so Huo Jian Hua’s Definition of Boundedness is the key for the Definition of Existence proof. Then, a whole class of mathematics problems can be solved, proofs for the existence of natural numbers learnt since kindergarten, as well as for the ∃∞∀∞ proof. The Definition of Existence later verifies IINI∀I. Objects in this paper do NOT need to be sets however, e.g. infinity is not a set, nor is unbounded a set, yet, still, consider a non-well-funded set theory style in reading this paper.
+  </p>
 
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">4)
-<a href="ProofsOnTheRealNumbers.pdf" target="_blank">Proofs on the
-Real Numbers</a></span></span></span></font></font></font><a href="ProofsOnTheRealNumbers.pdf" target="_blank"><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">有關於實數的證明</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></font></a><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">.</span></span></span></font></font></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">+</span></span></span></font></font></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">∞</span></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">&gt;Rc,
--</span></span></span></font></font></font><font color="#000000"><span style="letter-spacing: normal"><span style="background: #ffffff">∞</span></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">&lt;R</span></span></span></font></font></font><font color="#000000"><font face="Cambria Math, serif"><font size="1" style="font-size: 7pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">1</span></span></span></font></font></font><font color="#000000"><font face="Cambria Math, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: normal"><span style="font-weight: normal"><span style="background: #ffffff">,
-Extended R, (x,x)</span></span></span></font></font></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="4" style="font-size: 14pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">is
-smaller than [x,x]</span></span></span></font></font></font></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
+  <h2>Chapters &amp; Documents</h2>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="ProveThatInfinityIsNotInfinity.pdf" target="_blank">1) Prove that Infinity is not Infinity (證明無限不是無限)</a>
+    </li>
+    <li class="chapter-item">
+      <a href="DefinitionOfExistence.pdf" target="_blank">2) Nonexistence, Existence, ∃∞∀∞, and ∄∅⇔∃∅ (不存在、存在、∃∞∀∞及∄∅⇔∃∅)</a>
+    </li>
+    <li class="chapter-item">
+      <a href="ProofsForTheExistenceOfTheNaturalNumbers.pdf" target="_blank">3) Proofs for the Existence of the Natural Numbers (自然數存在的證明)</a>
+    </li>
+    <li class="chapter-item">
+      <a href="ProofsOnTheRealNumbers.pdf" target="_blank">4) Proofs on the Real Numbers (有關於實數的證明)</a>
+      <span class="meta-details">+∞&gt;Rc, -∞&lt;R1, Extended R, (x,x) is smaller than [x,x]</span>
+    </li>
+    <li class="chapter-item">
+      <a href="Prove_and_verify_that_infinity_is_not_x.pdf" target="_blank">5) Prove and Verify that Infinity is not x (證明及查對無限即非x)</a>
+    </li>
+    <li class="chapter-item">
+      <a href="ASummaryOfUnbounded.pdf" target="_blank">6) A Summary of the Unbounded (「無界」的摘要)</a>
+    </li>
+    <li class="chapter-item">
+      <a href="SupportingProofsForTheEmpty.pdf" target="_blank">7) Supporting Proofs for the Empty (「空無」的支援證明)</a>
+    </li>
+    <li class="chapter-item">
+      <a href="OffThePaperSolvingAnInfinityParadox.pdf" target="_blank">8) Off the Paper -- Resolving an Infinity Paradox, ∃∞∀∞ by an Alternative System (文外 — 解開無限的一個悖論, ∃∞∀∞由另一系統)</a>
+    </li>
+    <li class="chapter-item">
+      <a href="ReflexivityOfInfinityAndNotNotNotEffects.pdf" target="_blank">9) Reflexivity of Infinity and Its "not not not..."</a>
+    </li>
+    <li class="chapter-item">
+      <a href="SizeOfInfinity.pdf" target="_blank">10) What is the "Size" of Infinity?</a>
+    </li>
+    <li class="chapter-item">
+      <a href="Note.pdf" target="_blank">11) Note (備註)</a> 
+      &amp; <a href="WrapUpPoemZn.pdf" target="_blank">詙 (Wrap-up Poem)</a>
+    </li>
+  </ul>
 
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">5)
-<a href="Prove_and_verify_that_infinity_is_not_x.pdf" target="_blank">Prove
-and Verify that Infinity is not x (</a></span></span></span></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><a href="Prove_and_verify_that_infinity_is_not_x.pdf" target="_blank"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">證明及查對無限即非</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">x</span></span></span></font></font></font><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></a></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
+  <div class="external-links-section">
+    <p><strong>External Link:</strong> <a href="https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/">Using Huo Jian Hua's Definition of Boundedness on GitHub</a></p>
+    <p>
+      <strong>Fan-made Web3 URLs</strong> (Accessible via <a href="https://brave.com" target="_blank">Brave Browser</a>):<br>
+      <a href="https://huojianhuafan.x/">https://huojianhuafan.x</a>, 
+      <a href="https://huojianhua.x/">https://huojianhua.x</a>
+    </p>
+  </div>
 
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">6)
-<a href="ASummaryOfUnbounded.pdf" target="_blank">A Summary of the
-Unbounded (</a></span></span></span></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><a href="ASummaryOfUnbounded.pdf" target="_blank"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">「無界」的摘要</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></a></span></h2>
-<p align="left" style="line-height: 150%; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
+  <footer>
+    All rights-benefits go to Huo Jian Hua by Huo Jian Hua's Definition of Boundedness contract guaranteed to Hu Jian Hua.
+  </footer>
 
-</p>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">7)
-<a href="SupportingProofsForTheEmpty.pdf" target="_blank">Supporting
-Proofs for the Empty&nbsp;</a></span></span></span></font></font><a href="SupportingProofsForTheEmpty.pdf" target="_blank"><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">「空無」的支援證明</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></font></a></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
-
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">8)
-<a href="OffThePaperSolvingAnInfinityParadox.pdf" target="_blank">Off
-the Paper -- Resolving an Infinity Paradox, ∃∞∀∞ by an
-Alternative System&nbsp;</a></span></span></span></font></font></font><a href="OffThePaperSolvingAnInfinityParadox.pdf" target="_blank"><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">文外
-— 解開無限的一個悖論</span></span></font></font></span></span></font></span></font></a><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">,</span></span></span></font></font><a href="OffThePaperSolvingAnInfinityParadox.pdf" target="_blank"><font color="#000000"><span style="letter-spacing: normal"><span style="background: #ffffff">∃∞∀∞</span></span></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: normal"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">由另一系統</span></span></font></font></span></span></font></a><a href="OffThePaperSolvingAnInfinityParadox.pdf" target="_blank"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Noto Serif CJK SC"><span lang="zh-CN">∃∞∀∞</span></font></span></span></font><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">由另一系統</span></span></font></font></span></span></font></a></span></font></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
-
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">9)
-<a href="ReflexivityOfInfinityAndNotNotNotEffects.pdf" target="_blank">Reflexivity
-of Infinity and Its &quot;not not not...&quot;</a></span></span></span></font></font></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
-
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">10)
-<a href="SizeOfInfinity.pdf" target="_blank">What is the &quot;Size&quot;
-of Infinity?</a></span></span></span></font></font></span></h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<br/>
-
-</h2>
-<h2 class="western" align="left" style="line-height: 150%; margin-top: 0in; margin-bottom: 0in; border: none; padding: 0in">
-<span style="display: inline-block; border: none; padding: 0in"><font color="#000000"><font face="Cambria Math, serif"><font size="5" style="font-size: 18pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">11)
-<a href="Note.pdf" target="_blank">Note&nbsp;</a></span></span></span></font></font></font><a href="Note.pdf" target="_blank"><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">(</span></span></span></font></font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span lang="zh-CN"><span style="font-weight: normal">備註</span></span></font></font></span></span></font></span></font><font color="#000000"><font face="Cambria Math, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: 0.7pt"><span style="font-weight: normal"><span style="background: #ffffff">)</span></span></span></font></font></font></a><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff">&nbsp;</span></span></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><a href="WrapUpPoemZn.pdf" target="_blank"><font color="#000000"><span style="letter-spacing: 0.7pt"><span style="background: #ffffff"><font face="Cambria Math, serif"><font size="4" style="font-size: 14pt"><span lang="zh-CN"><span style="font-weight: normal">詙</span></span></font></font></span></span></font></a></span></font></span></h2>
-<p align="center"><br/>
-<br/>
-
-</p>
-<p align="left">External Link:</p>
-<p align="left">
-	<a href="https://jackwang5-rgb.github.io/Using-Huo-Jian-Hua-s-Definition-of-Boundedness/">
-		Using Huo Jian Hua's Definition of Boundedness on Github
-	</a>
-</p>
-
-<p align="left">
-	Fan made web3 URLs (get  
-		<a href="https://brave.com/">
-			Brave 
-		</a>
-	web3 browser):
-		<a href="https://huojianhuafan.x/">
-			https://huojianhuafan.x
-		</a>
-	, 
-		<a href="https://huojianhua.x/">
-			https://huojianhua.x
-		</a>
-</p>
-<p align="left"><br/>
-<br/>
-
-</p>
-<p align="center" style="letter-spacing: normal; text-indent: 0.5in"><font face="inherit"><font size="2" style="font-size: 10pt"><span style="background: #ffffff">All
-rights-benefits go to Huo Jian Hua by Huo Jian Hua's Definition of Boundedness contract guaranteed to Hu Jian Hua.</span></font></font></p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
 </body>
 </html>
